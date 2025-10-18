@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellipe | Portfólio de Desenvolvimento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Portfólio.</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#portfolio">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Olá, eu sou</h3>
+            <h1>Fellip</h1>
+            <h3>E sou <span class="typing-effect"></span></h3>
+            <p>Estudante do 4º semestre de Análise e Desenvolvimento de Sistemas. Apaixonado por tecnologia e focado em criar soluções web inovadoras.</p>
+            <div class="social-media">
+                <a href="https://github.com/Fellipsilva" target="_blank" class="social-link"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/sr_fellip" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="imagem/Imagem do WhatsApp de 2025-10-18 à(s) 15.45.46_1f103e03.jpg" alt="Foto de Fellip">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">Sobre <span>Mim</span></h2>
+            <h3>Futuro Desenvolvedor Web!</h3>
+            <p>Atualmente no 4º semestre de ADS, estou construindo uma base sólida em lógica de programação, desenvolvimento front-end e back-end. Busco oportunidades para aplicar meu conhecimento em projetos práticos, colaborar com equipes e transformar ideias em código funcional.</p>
+            <a href="#" class="btn">Leia Mais</a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">Minhas <span>Habilidades</span></h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fa-brands fa-html5"></i>
+                <h3>Front-End</h3>
+                <p>HTML, CSS e JavaScript para a criação de interfaces de usuário interativas e responsivas.</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-solid fa-code-branch"></i>
+                <h3>Back-End</h3>
+                <p>Conhecimentos em linguagens como PHP e Python para construir a lógica do lado do servidor.</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-solid fa-database"></i>
+                <h3>Banco de Dados</h3>
+                <p>Modelagem e manipulação de dados com SQL, utilizando bancos como MySQL.</p>
+            </div>
+            <div class="skill-box">
+                <i class="fa-brands fa-git-alt"></i>
+                <h3>Ferramentas</h3>
+                <p>Versionamento de código com Git e GitHub para gerenciamento de projetos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Últimos <span>Projetos</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="imagem/image.png" alt="Projeto 1">
+                <div class="portfolio-layer">
+                    <h4>Sistema de Academia OAT</h4>
+                    <p>Projeto desenvolvido em Java Swing, com 8 telas, incluindo tela inicial e menu de login.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="imagem/Captura de tela 2025-10-18 164346.png" alt="Projeto 2">
+                <div class="portfolio-layer">
+                    <h4>Jogo Arcade Cobrinha</h4>
+                    <p>Desenvolvido em HTML5, CSS3 e JavaScript.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="imagem/Captura de tela 2025-10-18 162835.png" alt="Projeto 3">
+                <div class="portfolio-layer">
+                    <h4>RPG de Texto</h4>
+                    <p>Projeto interativo criado com HTML5, CSS3 e JavaScript — "A saga da coroa fragmentada".</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario">
+            <div class="grupo-form">
+                <input id="nome" placeholder="Nome" class="campo-form" type="text">
+            </div>
+            <div class="grupo-form">
+                <textarea id="mensagem" class="campo-form" placeholder="Digite sua Mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar para WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nome = document.getElementById("nome").value.trim();
+            const mensagem = document.getElementById("mensagem").value.trim();
+
+            if (nome === "" || mensagem === "") {
+                alert("Por favor, preencha seu nome e a mensagem antes de enviar.");
+                return;
+            }
+
+            const texto = `Olá, meu nome é ${nome}! Entrei em contato através do seu portfólio. ${mensagem}`;
+            const numero = "5561992609012"; // sem +, sem espaços
+            const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+            window.open(link, "_blank");
+        });
+    </script>
+<script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>&copy; 2025 por Fellip | Todos os Direitos Reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
